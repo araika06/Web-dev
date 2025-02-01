@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Facebook Вход</title>
+
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background-color: #e9ebee;
+                text-align: center;
+                display: flex;
+                padding: 0;
+                margin: 0;
+                
+                
+            }
+
+            .container{
+                margin-top: 120px;
+                margin-left: 90px; 
+                padding-right: 30px;
+                padding-top: 10px;
+                width: 40%;
+                text-align: start;
+
+            }
+
+            .container h1{
+                color: #1872e8;
+                font-size: 65px;
+                margin-bottom: 10px;
+            }
+
+            .container p{
+                font-size: 25px;
+                color: #1f1e1e;
+            }
+
+            .login{
+                background: white;
+                width: 29%;
+                padding: 20px;
+                margin: 30px auto;
+                margin-right: 120px;
+                margin-top: 150px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                
+            }
+
+            .login input{
+                width: 90%;
+                padding: 12px;
+                margin: 8px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                display: block;
+            }
+
+            .login button{
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .submit{
+                background-color: #1877f2;
+            }
+
+            .submit:hover{
+                background-color: #165cbb;
+            }
+
+            .forget{
+                background: none;
+                color: #1877f2;
+                text-decoration: none;
+                font-size: 14px;
+                display: block;
+                margin-top: 10px;
+            }
+
+            .fotget:hover{
+                text-decoration: underline;
+            }
+
+            .new-acc{
+                background-color: #42b72a;
+            }
+
+            .new-acc:hover{
+                background-color: #369620;
+            }
+
+            hr{
+                margin: 20px 0;
+                border: 0;
+                height: 1px;
+                background: #ddd;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>facebook</h1>
+            <p>Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>
+
+        </div>
+
+        <div class="login">
+            <input type="text" placeholder="Электронный адрес или номер телефона">
+            <input type="password" placeholder="Пароль">
+            <button class="submit">Вход</button>
+            <a href="#" class="forget">Забыли пароль?</a>
+            <div class="new">
+            <hr>
+            <button class="new-acc">Создать новый аккаунт</button>
+            </div>
+        </div>
+    </body>
+</html>
