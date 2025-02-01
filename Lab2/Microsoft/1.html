@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Microsoft Homepage</title>
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color: white;
+                color: black;
+                font-size: 15px;
+                height: 80em;
+            }
+
+            a{
+                color: #262626;
+                text-decoration: none;
+            }
+
+            ul{
+                list-style: none;
+            } 
+
+            .container{
+                width: 90%;
+                margin: auto;
+                max-width: 1100px; 
+            }
+
+            .main{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+                font-size: 13px;
+            }
+
+            .main .logo{
+                width: 110px;
+            }
+
+            .main ul{
+                display: flex;
+            }
+
+            .main ul li{
+                padding: 0 10px;
+            }
+
+            .main ul li a {
+                padding-bottom: 2px;
+            }
+
+            .main ul li a:hover{
+                border-bottom: 2px solid #262626;
+            }
+
+            .main ul.main-menu{
+                flex: 1;
+                margin-left: 40px;
+            }
+
+            .line{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background-color: #1a5cbd;
+                padding: 14px;
+            }
+
+            .line p{
+                font-family: 'Times New Roman';
+                font-size: 14px;
+            }
+
+            .background img{
+                background-image: url(photo.jpg);
+            }
+
+            .background-text{
+                background-color: white;
+                font-family: 'Times New Roman';
+                font-size: 12px;
+                text-align: start;
+                justify-content: center;
+                justify-content: space-between;
+                padding: 30px;
+                position: absolute;
+                top: 150px;
+                left: 60px;
+            }
+
+            .background-text h1{
+                margin-bottom: 10px;
+            }
+
+            .background-text p{
+                margin-bottom: 10px;
+            }
+
+            .background-text button{
+                background-color: #1a5cbd;
+                color: white;
+                border: none;
+                font-size: 10px;
+                padding: 4px;
+            }
+
+            .panel ul{
+                display: flex;
+                list-style: none;
+                justify-content: center;
+                gap: 15px;
+                font-size: 10px;
+                padding: 7px;
+            }
+
+            .photos{
+                display: flex;
+                justify-content: center;
+                gap: 120px;
+                padding: 15px;
+            }
+
+            .panel2 ul {
+                display: flex;
+                justify-content: center;
+                font-size: 10px;
+                gap: 35px;
+            }
+            
+            .panel2 li a{
+                color: #0645ad;
+            }
+
+            .panel2 li a:hover{
+                text-decoration: underline;
+            }
+
+            .blocks{
+                display: flex;
+                font-family: Arial, Helvetica, sans-serif;
+                justify-content: center;
+                gap: 15px;
+                padding: 20px;
+                margin: 15px;
+                text-align: start;
+                border-radius: 10px;
+            }
+
+            .blocks h1{
+                font-size: 15px;
+                margin: 10px;
+            }
+
+            .blocks p{
+                font-size: 13px;
+                margin: 10px;
+            }
+
+            .blocks button{
+                background-color: #1a5cbd;
+                color: white;
+                border: none;
+                font-size: 10px;
+                padding: 4px;
+                margin-left: 9px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main">
+                <img src="logo.webp" alt="logo" width="100px">
+            
+            <ul class="main-menu">
+                <li><a href="#">Microsoft 365</a></li>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Copilot</a></li>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">Surface</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Small Buisness</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <ul class="right-menu">
+                <li>All Microsoft
+                    <a href="#">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </li>
+                <li>Search
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a> 
+                </li>
+                <li>Cart
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li>Sign in
+                    <a href="#">
+                        <i class="fa fa-user-circle"></i>
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div class="line">
+            <p>Pay your way, with flexible payment options avaliable at checkout. Learn more</p>
+            <i class="fa solid fa-angle-right"></i>
+        </div>
+        <div class="background">
+            <img src="photo.jpg" alt="background" width="100%">
+
+            <div class="background-text">
+                <h1 class="bh">Meet Surface Pro</h1>
+                <p class="bp">This laptop is unrivalled flexibility and AI features like Live Captions and <br> 
+                Cocreator enable you to do more than you ever imagined.</p>
+                <button class="bbt">Shop now</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-circle-pause"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-circle"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel2">
+            <div class="photos">
+            <img src="L1.svg" width="40px">
+            <img src="L2.svg" width="30px">
+            <img src="L3.svg" width="30px">
+            <img src="L4.svg" width="30px">
+            <img src="L5.svg" width="30px">
+            <img src="L6.svg" width="30px">
+            </div>
+            <ul>
+                <li><a href="#">Shop Surface devices</a></li>
+                <li><a href="#">Shop Xbox games and consoles</a></li>
+                <li><a href="#">Shop for accessories</a></li>
+                <li><a href="#">Shop for business</a></li>
+                <li><a href="#">Find your next PC</a></li>
+                <li><a href="#">Choose your Microsoft 365</a></li>
+            </ul>
+        </div>
+
+        <div class="blocks">
+            <div class="block1">
+                <img src="i1.avif" width="100%">
+                <h1 >Save up to $500 on select Surface Pro, Copilot+ PC</h1>
+                <p>Score savings on a fast, flexible 2-in-1 built for advanced AI experiences. For a limited time.</p>
+                <button>Shop now</button>
+            </div>
+
+            <div class="block2">
+                <img src="i2.avif" width="100%">
+                <h1 >Save up to $500 on select Surface Laptop, Copilot+ PC</h1>
+                <p>Save big on an AI-powered companion made for next-gen performance. For a limited time.</p>
+                <button>Shop now</button>
+            </div>
+
+            <div class="block3">
+                <img src="i3.avif" width="87%">
+                <h1>Achieve the extraordinary</h1>
+                <p>Microsoft 365 delivers cloud storage, security, and Microsoft Copilot in your favorite apps—all in one plan.</p>
+                <button>Shop now</button>
+            </div>
+
+            <div class="block4">
+                <img src="i4.avif" width="110%">
+                <h1>Copilot is your AI companion</h1>
+                <p>Always by your side, ready to support you whenever and wherever you need it.</p>
+                <button>Shop now</button>
+
+            </div>
+        </div>
+    </body>
+</html>
