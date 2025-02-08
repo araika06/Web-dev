@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let user = {
+                name: "John",
+                age: 30
+            };
+
+            let {name, years: age, isAdmin = false} = user;
+
+            alert( name );
+            alert( age );
+            alert( isAdmin );
+        </script>
+
+        <script>
+            function topSalary(salaries) {
+                let maxSalary = 0;
+                let maxName = null;
+
+                for(const [name, salary] of Object.entires(salaries)) {
+                    if(maxSalary < salary) {
+                        maxSalary = salary;
+                        maxName = name;
+                    }
+                }
+
+                return maxName;
+            }
+        </script>
+    </body>
+</html>

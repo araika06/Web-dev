@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function filterRange(arr, a, b) {
+                return arr.filter(item => ( a <= item && item <= b ));
+            }
+
+            let arr = [5, 3, 8, 1];
+
+            let filtered = filterRange(arr, 1, 4);
+
+            alert( filtered ); //3, 1
+            alert( arr ); // 5, 3, 8, 1
+        </script>
+
+        <script>
+            function filterRangeInPlace(arr, a, b) {
+                for (let i=0; i < arr.lenght; i++) {
+                    let val = arr[i];
+
+                    if(val < a || val > b) {
+                        arr.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+
+            let arr1 = [5, 3, 8, 1];
+            filterRangeInPlace(arr1, 1, 4); //3, 1
+            alert( arr1 );
+        </script>
+
+        <script>
+            let arr2 = [5, 2, 1, -10, 8];
+            arr2.sort((a, b) => b - a);
+            alert( arr2 );
+        </script>
+
+        <script>
+            function copySorted(arr3) {
+                return arr3.slice().sort();
+            }
+
+            let arr3 = ["HTML", "JavaScript", "CSS"];
+
+            let sorted = copySorted(arr3);
+            alert( sorted );
+            alert( arr3 );
+        </script>
+
+        <script>
+            function Calculator() {
+                this.methods = {
+                    "-": (a, b) => a - b,
+                    "+": (a, b) => a + b
+                };
+
+                this.calculate = function(str) {
+                    let split = str.split(' '),
+                    a = +split[0],
+                    op = split[1],
+                    b = +split[2];
+
+                    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+                        return NaN;
+                    }
+
+                    return this.methods[op](a, b);
+                };
+
+                this.addMethods = function(name, func) {
+                    this.methods[name] = func;
+                };
+            }
+        </script>
+
+        <script>
+            let john = { name: "John", age: 25 };
+            let pete = { name: "Pete", age: 30 };
+            let mary = { name: "Mary", age: 28 };
+            let users = [ john, pete, mary ];
+
+            let names = users.map(item => item.name);
+
+            alert( names );
+        </script>
+
+        <script>
+            function sortByAge(arr) {
+                arr.sort((a, b) => a.age - b.age);
+            }
+
+            let john1 = { name: "John", age: 25 };
+            let pete1 = { name: "Pete", age: 30 };
+            let mary1 = { name: "Mary", age: 28 };
+            let users1 = [ john, pete, mary ];
+
+            sortByAge(arr);
+
+            alert(arr[0].name);
+            alert(arr[1].name);
+            alert(arr[2].name);
+        </script>
+    </body>
+</html>

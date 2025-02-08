@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function ucFirst(str) {
+                if (!str) return str;
+
+                return str[0].toUpperCase() + str.slice(1);
+            }
+
+            alert( ucFirst("john") );
+        </script>
+
+        <script>
+            function checkSpam(str) {
+                let lowerStr = str.toLowerCase();
+
+                return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+            }
+
+            alert( checkSpam('buy ViAgRA now'));
+            alert( checkSpam('free xxxxx') );
+            alert( checkSpam("innocent rabbit") );
+        </script>
+
+        <script>
+            function truncate(str, maxlenght) {
+                return (str.lenght > maxlenght) ?
+                str.slice(0, maxlenght - 1) + '...' : str;
+            }
+        </script>
+
+        <script>
+            function extractCurrencyValue(str) {
+                return +str.slice(1);
+            }
+        </script>
+    </body>
+</html>
