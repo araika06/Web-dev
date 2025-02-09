@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDo List App</title>
+        <style>
+            body{
+                background-color: #f4f4f4;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .header{
+                background-color: #333;
+                color: white;
+                font-size: 12px;
+                padding: 10px;
+                font-weight: 100;
+                
+            }
+
+            .header2{
+                color: #333;
+            }
+
+            .container{
+                width: 50%;
+                margin: 50px;
+                padding: 20px;
+                border-radius: 8px;
+                position: fixed;
+                left: 240px;
+                top: 20px;
+            }
+
+            .todo-input{
+                width: 80%;
+                padding: 9px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .add-btn{
+                padding: 9px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .add-btn:hover{
+                background-color: #0056b3;
+            }
+
+            .todo-list{
+                list-style: none;
+                padding: 0;
+                margin-top: 20px;
+                width: 50%;
+                margin: 50px;
+                background-color: white;
+                padding: 0;
+                position: fixed;
+                top: 180px;
+                left: 250px;
+            }
+
+            .todo-item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+
+            .todo-item.completed .task-text{
+                text-decoration: line-through;
+                color: #888;
+            }
+
+            .delete-btn{
+                background-color: none;
+                border: none;
+                color: red;
+                font-size: 18px;
+                
+            }
+
+            .delete-btn:hover{
+                color: darkred;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="header">ToDo List</h2>
+        <div class="container">
+            <h2 class="header2">ToDo List</h2>
+            <input type="text" id="new-task" class="todo-input" placeholder="New Task">
+            <button class="add-btn" onclick="addTask()">Add</button>
+            
+        </div>
+        <div class="list">
+            <ul id="taskList" class="todo-list"></ul>   
+        </div>
+
+        <script>
+            function addTask() {
+                const taskInput = document.getElementById('new-task');
+                const taskText = taskInput.value.trim();
+
+                if(taskText === '') return;
+
+                const taskList = document.getElementById('taskList');
+                const li = document.createElement('li');
+                li.className = 'todo-item';
+
+                li.innerHTML = 
+                `<input type="checkbox" onclick="done(this)">
+                <span class="task-text">${taskText}</span>
+                <button class="delete-btn" onclick="deleteTask(this)">&#128465;</button>`;
+
+                taskList.appendChild(li);
+                taskInput.value = '';
+            }
+
+            function done(checkbox) {
+                const taskItem = checkbox.parentElement;
+                taskItem.classList.toggle('completed');
+            }
+
+            function deleteTask(button) {
+                const taskItem = button.parentElement;
+                taskItem.remove();
+            }
+        </script>
+    </body>
+</html>
