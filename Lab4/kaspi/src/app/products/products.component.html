@@ -1,0 +1,14 @@
+<h2 class="catalog-title">Католог товаров</h2>
+
+<div class="products-container">
+    <div *ngFor="let product of products" class="product-card">
+      <div class="gallery">
+        <img [src]="product.image[0]" alt="{{ product.name }}">
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>⭐ {{ product.rating }}</p>
+      <a [href]="product.link" target="_blank">Смотреть на Kaspi.kz</a>
+      <button (click)="shareOnTelegram('yourTelegramUsernameOrGroup', product.link)">📩 Поделиться в Telegram</button>
+    </div>
+  </div>
